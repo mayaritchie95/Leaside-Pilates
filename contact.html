@@ -28,30 +28,36 @@
     <a class="brand" href="index.html">Leaside Pilates<small>Toronto · Est. Boutique Studio</small></a>
     <nav aria-label="Primary">
       <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="private-pilates.html">Private Pilates</a></li>
-        <li><a href="group-classes.html">Group Classes</a></li>
-        <li><a href="gyrotonic.html">Gyrotonic®</a></li>
+        <li class="has-menu">
+          <a href="private-pilates.html" aria-haspopup="true">Services <span class="caret" aria-hidden="true"></span></a>
+          <ul class="submenu">
+            <li><a href="private-pilates.html">Private Pilates<small>One-on-one, duo &amp; trio</small></a></li>
+            <li><a href="group-classes.html">Group Classes<small>Small equipment classes</small></a></li>
+            <li><a href="gyrotonic.html">Gyrotonic&reg;<small>Specialized movement</small></a></li>
+          </ul>
+        </li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="first-visit.html">New Here</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn ghost" href="contact.html#login">Log In</a>
+      <a class="nav-login" href="contact.html#login">Log In</a>
       <a class="btn brass" href="contact.html#book">Book Now</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 <div class="mobile-menu">
-  <a href="about.html">About</a>
   <a href="private-pilates.html">Private Pilates</a>
   <a href="group-classes.html">Group Classes</a>
-  <a href="gyrotonic.html">Gyrotonic®</a>
+  <a href="gyrotonic.html">Gyrotonic&reg;</a>
   <a href="pricing.html">Pricing</a>
   <a href="first-visit.html">New Here</a>
+  <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
+  <a class="nav-login" href="contact.html#login" style="padding:14px 0;border-bottom:1px solid var(--line)">Log In / Sign Up</a>
   <a class="btn brass" href="contact.html#book">Book Now</a>
 </div>
 <main id="main">
