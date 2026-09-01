@@ -71,7 +71,7 @@
 <!-- HEADER -->
 <header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="index.html">Leaside Pilates<small>Toronto · Est. Boutique Studio</small></a>
+    <a class="brand" href="index.html" aria-label="Leaside Pilates home"><span class="brand-name">Leaside</span><span class="brand-sub">Pilates</span></a>
     <nav aria-label="Primary">
       <ul class="nav-links">
         <li class="has-menu">
@@ -110,7 +110,12 @@
 <main id="main">
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-media"><img src="assets/hero.jpg" alt="A bright group reformer class in progress at Leaside Pilates in Toronto, clients in cream studio tees" width="2000" height="1333" fetchpriority="high"></div>
+  <div class="hero-media">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <img class="hero-fallback" src="assets/hero-poster.jpg" alt="Instructors and clients moving together in a bright group class at Leaside Pilates in Toronto" width="2000" height="1126" fetchpriority="high">
+  </div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Pilates &amp; Gyrotonic® · Toronto</span>
     <h1>Move with <em>intention.</em><br>Feel strong in your body.</h1>
@@ -156,21 +161,33 @@
       <h2>Services tailored to your goals</h2>
       <p>From focused one-on-one work to energizing small groups, choose the format that fits how you want to move.</p>
     </div>
-    <div class="svc-list">
-      <a class="svc-item reveal" href="private-pilates.html">
-        <span class="idx">01</span>
-        <div><h3>Private &amp; Duo Pilates</h3><p>Fully individualized sessions for injury recovery, prenatal &amp; postnatal work, sport performance, or simply the fastest path to results.</p></div>
-        <span class="arrow" aria-hidden="true">→</span>
+    <div class="svc-cards">
+      <a class="svc-card reveal" href="group-classes.html">
+        <div class="svc-card-media"><img src="assets/svc-group.jpg" alt="A small group reformer class at Leaside Pilates" width="1400" height="2100" loading="lazy" decoding="async"></div>
+        <div class="svc-card-body">
+          <span class="svc-card-kicker">01 — Small Groups</span>
+          <h3>Group Classes</h3>
+          <p>Reformer and equipment-based classes capped at five, for close, hands-on attention every time.</p>
+          <span class="svc-card-link">Explore group classes <span aria-hidden="true">→</span></span>
+        </div>
       </a>
-      <a class="svc-item reveal" href="group-classes.html">
-        <span class="idx">02</span>
-        <div><h3>Small Group Classes</h3><p>Reformer and equipment-based classes capped at five people, so you get close, hands-on attention and precise cueing every time.</p></div>
-        <span class="arrow" aria-hidden="true">→</span>
+      <a class="svc-card reveal d1" href="private-pilates.html">
+        <div class="svc-card-media"><img src="assets/svc-private.jpg" alt="An instructor guiding a client through a private reformer session at Leaside Pilates" width="1400" height="2100" loading="lazy" decoding="async"></div>
+        <div class="svc-card-body">
+          <span class="svc-card-kicker">02 — One-on-One</span>
+          <h3>Private, Duo &amp; Trio</h3>
+          <p>Fully individualized sessions for injury recovery, prenatal &amp; postnatal work, sport, or the fastest path to results.</p>
+          <span class="svc-card-link">Explore private sessions <span aria-hidden="true">→</span></span>
+        </div>
       </a>
-      <a class="svc-item reveal" href="gyrotonic.html">
-        <span class="idx">03</span>
-        <div><h3>Gyrotonic®</h3><p>Flowing, circular movement on specialized equipment to build mobility, decompress the spine, and move with freedom.</p></div>
-        <span class="arrow" aria-hidden="true">→</span>
+      <a class="svc-card reveal d2" href="gyrotonic.html">
+        <div class="svc-card-media"><img src="assets/svc-gyro.jpg" alt="A client in a supported reformer stretch at Leaside Pilates" width="1400" height="2100" loading="lazy" decoding="async"></div>
+        <div class="svc-card-body">
+          <span class="svc-card-kicker">03 — Specialized</span>
+          <h3>Gyrotonic&reg; Privates</h3>
+          <p>Flowing, circular movement on specialized equipment to build mobility, decompress the spine, and move with freedom.</p>
+          <span class="svc-card-link">Explore Gyrotonic&reg; <span aria-hidden="true">→</span></span>
+        </div>
       </a>
     </div>
   </div>
@@ -199,18 +216,14 @@
       <span class="eyebrow">See What Others Are Saying</span>
       <h2>Loved by our community</h2>
     </div>
-    <div class="reveal">
-      <div class="testi-track">
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Such an amazing experience at Leaside Pilates! The studio is beautiful, clean, well equipped, and Carmen made the class enjoyable from start to finish. Highly recommend!"</blockquote><cite>ARW<small>Group class</small></cite></figure>
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Each class limited to 5 people, which translates into close, personal and hands-on instruction. I'm stronger and leaner as a result. I highly recommend this amazing studio!"</blockquote><cite>ST<small>Private &amp; group</small></cite></figure>
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Twice a week with Nadia, the most caring, knowledgeable instructor I've come across. Each class is tailored to my personal goals. The investment is worth it."</blockquote><cite>AH<small>Private client</small></cite></figure>
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"The space is bright, modern and clean. Monika has been incredible at helping me get everything I can out of the discipline. I am eager to attend each class."</blockquote><cite>SH<small>Private client</small></cite></figure>
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Just left the most upbeat and enjoyable class with Yoon. You'll leave with a smile on your face and feeling like you had a great workout. Highly recommend."</blockquote><cite>KM<small>Group class</small></cite></figure>
-        <figure class="testi-card"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Hidden gem! Beautiful little studio. Ewa is the best. I'd recommend it to anyone wanting to try Pilates for the first time or if you're a seasoned veteran."</blockquote><cite>EG<small>Group class</small></cite></figure>
-      </div>
-      <div class="testi-nav">
-        <button class="testi-prev" aria-label="Previous testimonials">←</button>
-        <button class="testi-next" aria-label="Next testimonials">→</button>
+    <div class="reveal testi-viewport">
+      <div class="testi-track" role="list">
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Such an amazing experience at Leaside Pilates! The studio is beautiful, clean, well equipped, and Carmen made the class enjoyable from start to finish. Highly recommend!"</blockquote><cite>ARW<small>Group class</small></cite></figure>
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Each class limited to 5 people, which translates into close, personal and hands-on instruction. I'm stronger and leaner as a result. I highly recommend this amazing studio!"</blockquote><cite>ST<small>Private &amp; group</small></cite></figure>
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Twice a week with Nadia, the most caring, knowledgeable instructor I've come across. Each class is tailored to my personal goals. The investment is worth it."</blockquote><cite>AH<small>Private client</small></cite></figure>
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"The space is bright, modern and clean. Monika has been incredible at helping me get everything I can out of the discipline. I am eager to attend each class."</blockquote><cite>SH<small>Private client</small></cite></figure>
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Just left the most upbeat and enjoyable class with Yoon. You'll leave with a smile on your face and feeling like you had a great workout. Highly recommend."</blockquote><cite>KM<small>Group class</small></cite></figure>
+        <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Hidden gem! Beautiful little studio. Ewa is the best. I'd recommend it to anyone wanting to try Pilates for the first time or if you're a seasoned veteran."</blockquote><cite>EG<small>Group class</small></cite></figure>
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ document.getElementById('site-footer').innerHTML = `
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand">Leaside Pilates</div>
+        <div class="foot-brand"><span class="foot-brand-name">Leaside</span><span class="foot-brand-sub">Pilates</span></div>
         <p>A boutique Pilates &amp; Gyrotonic® studio in Toronto. Private sessions, duos, trios, and small group classes with experienced instructors.</p>
         <p style="margin-top:12px">28 Industrial St, Unit 108 &amp; 109<br>East York, ON, M4G 1Y9</p>
       </div>

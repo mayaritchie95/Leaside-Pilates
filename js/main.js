@@ -32,23 +32,28 @@ if ('IntersectionObserver' in window && reveals.length) {
   reveals.forEach(r => r.classList.add('in'));
 }
 
-// testimonials carousel
+// testimonials: seamless auto-sliding marquee
 const track = document.querySelector('.testi-track');
 if (track) {
-  const cards = track.children.length;
-  let i = 0;
-  const step = () => {
-    const card = track.children[0];
-    const w = card.getBoundingClientRect().width + 24;
-    const perView = Math.max(1, Math.floor(track.parentElement.clientWidth / w));
-    const max = Math.max(0, cards - perView);
-    i = Math.min(Math.max(i, 0), max);
-    track.style.transform = `translateX(${-i * w}px)`;
-  };
-  document.querySelector('.testi-prev')?.addEventListener('click', () => { i--; step(); });
-  document.querySelector('.testi-next')?.addEventListener('click', () => { i++; step(); });
-  window.addEventListener('resize', step);
-  step();
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    // no animation: let it wrap/scroll naturally
+    track.style.animation = 'none';
+    track.style.flexWrap = 'wrap';
+    track.style.justifyContent = 'center';
+  } else {
+    // duplicate the set once so the -50% keyframe loops seamlessly
+    track.setAttribute('aria-hidden', 'false');
+    const originals = Array.from(track.children);
+    originals.forEach(node => {
+      const clone = node.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+    // scale duration to card count so speed feels consistent
+    const perCard = 5; // seconds per card
+    track.style.animationDuration = (originals.length * perCard) + 's';
+  }
 }
 
 // FAQ accordion
@@ -72,3 +77,18 @@ document.querySelectorAll('.team-card .more').forEach(btn => {
 
 // footer year
 document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
+
+// Hero video: reveal only once it can actually play; otherwise keep the photo fallback
+(function(){
+  const media = document.querySelector('.hero-media');
+  const video = document.querySelector('.hero-video');
+  if(!media || !video) return;
+  const show = () => media.classList.add('video-ready');
+  // If the source is missing/unsupported, 'canplay' never fires and the image stays.
+  video.addEventListener('canplay', show, { once:true });
+  video.addEventListener('error', () => media.classList.remove('video-ready'));
+  // Respect reduced-motion: pause video, keep the still image
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    try{ video.pause(); video.removeAttribute('autoplay'); }catch(e){}
+  }
+})();
