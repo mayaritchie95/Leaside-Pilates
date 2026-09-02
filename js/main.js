@@ -66,14 +66,42 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 });
 
-// team expandable bios
-document.querySelectorAll('.team-card .more').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const bio = btn.previousElementSibling;
-    const open = bio.classList.toggle('open');
-    btn.querySelector('.label').textContent = open ? 'Read less' : 'Read bio';
+// team bios in a modal
+(function(){
+  const modal = document.getElementById('bio-modal');
+  const dataEl = document.getElementById('bio-data');
+  if(!modal || !dataEl) return;
+  let bios={};
+  try{ bios = JSON.parse(dataEl.textContent); }catch(e){ return; }
+  const nameEl = document.getElementById('bio-modal-name');
+  const roleEl = document.getElementById('bio-modal-role');
+  const bodyEl = document.getElementById('bio-modal-body');
+  let lastFocus = null;
+
+  function open(key){
+    const b = bios[key]; if(!b) return;
+    nameEl.textContent = b.name;
+    roleEl.textContent = b.role;
+    bodyEl.innerHTML = '<p>' + String(b.bio).split('\n\n').join('</p><p>') + '</p>';
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lastFocus = document.activeElement;
+    modal.querySelector('.bio-modal-close').focus();
+  }
+  function close(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if(lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.team-card').forEach(card => {
+    const key = card.getAttribute('data-bio');
+    card.querySelectorAll('.bio-open').forEach(btn =>
+      btn.addEventListener('click', () => open(key))
+    );
   });
-});
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && !modal.hidden) close(); });
+})();
 
 // footer year
 document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
