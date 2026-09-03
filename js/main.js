@@ -120,3 +120,23 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
     try{ video.pause(); video.removeAttribute('autoplay'); }catch(e){}
   }
 })();
+
+// Homepage intro form: route to the matching Momence booking
+(function(){
+  const form = document.getElementById('intro-form');
+  if(!form) return;
+  const LINKS = {
+    'Group reformer classes': 'https://momence.com/dashboard/150866/memberships/package/593017',
+    'Private Pilates': 'https://momence.com/Leaside-Pilates/membership/Intro-Private---3-Sessions/595513',
+    'Duo or trio sessions': 'https://momence.com/Leaside-Pilates/membership/Intro-Duo---3-Sessions/595533',
+    'Gyrotonic®': 'https://momence.com/Leaside-Pilates',
+    'Pre / postnatal Pilates': 'https://momence.com/Leaside-Pilates/membership/Intro-Private---3-Sessions/595513',
+    "I'm not sure yet": 'https://momence.com/Leaside-Pilates'
+  };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const svc = form.querySelector('[name="service"]').value;
+    const url = LINKS[svc] || 'https://momence.com/Leaside-Pilates';
+    window.open(url, '_blank', 'noopener');
+  });
+})();
