@@ -125,18 +125,20 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
 (function(){
   const form = document.getElementById('intro-form');
   if(!form) return;
+  const EMAIL = 'mailto:iva.mazar@gmail.com?subject=Private%20Pilates%20Inquiry';
   const LINKS = {
-    'Group reformer classes': 'https://momence.com/dashboard/150866/memberships/package/593017',
-    'Private Pilates': 'https://momence.com/Leaside-Pilates/membership/Intro-Private---3-Sessions/595513',
-    'Duo or trio sessions': 'https://momence.com/Leaside-Pilates/membership/Intro-Duo---3-Sessions/595533',
-    'Gyrotonic®': 'https://momence.com/Leaside-Pilates',
-    'Pre / postnatal Pilates': 'https://momence.com/Leaside-Pilates/membership/Intro-Private---3-Sessions/595513',
-    "I'm not sure yet": 'https://momence.com/Leaside-Pilates'
+    'Group reformer classes': 'https://momence.com/m/593017',
+    'Private Pilates': EMAIL,
+    'Duo or trio sessions': 'https://momence.com/m/595533',
+    'Gyrotonic®': EMAIL,
+    'Pre / postnatal Pilates': EMAIL,
+    "I'm not sure yet": 'mailto:iva.mazar@gmail.com?subject=Getting%20Started%20at%20Leaside%20Pilates'
   };
   form.addEventListener('submit', e => {
     e.preventDefault();
     const svc = form.querySelector('[name="service"]').value;
-    const url = LINKS[svc] || 'https://momence.com/Leaside-Pilates';
-    window.open(url, '_blank', 'noopener');
+    const url = LINKS[svc] || 'mailto:iva.mazar@gmail.com';
+    if (url.startsWith('mailto:')) { window.location.href = url; }
+    else { window.open(url, '_blank', 'noopener'); }
   });
 })();

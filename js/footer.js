@@ -1,6 +1,20 @@
 document.getElementById('site-footer').innerHTML = `
 <footer class="site-footer">
   <div class="wrap">
+    <div class="foot-newsletter">
+      <div class="foot-news-copy">
+        <h3>Stay in the loop</h3>
+        <p>Sign up for news about our workshops, community events, and class promos.</p>
+      </div>
+      <div class="foot-news-form">
+        <!-- MOMENCE NEWSLETTER EMBED: paste the Momence newsletter signup widget/iframe here -->
+        <div class="news-placeholder">
+          <input type="email" placeholder="you@example.com" aria-label="Email address" disabled>
+          <button class="btn brass" type="button" disabled>Sign Up</button>
+        </div>
+        <p class="news-note">Newsletter signup connects to Momence — embed to be added.</p>
+      </div>
+    </div>
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><span class="foot-brand-name">Leaside</span><span class="foot-brand-sub">Pilates</span></div>
