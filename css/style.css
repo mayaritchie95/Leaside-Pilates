@@ -91,6 +91,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .submenu a::after{display:none}
 .submenu a:hover{background:var(--plaster-deep);color:var(--mauve-deep)}
 .submenu a small{display:block;font-size:.74rem;font-weight:400;color:var(--muted);margin-top:2px}
+.submenu-heading{display:block;padding:10px 14px 4px;font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mauve-deep)}
+.submenu a.submenu-sub{padding:8px 14px 8px 22px;font-size:.86rem;font-weight:500;color:var(--muted)}
+.submenu a.submenu-sub:hover{color:var(--mauve-deep);background:var(--plaster-deep)}
+.submenu-divider{height:1px;background:var(--line);margin:8px 10px}
 .nav-cta{display:flex;align-items:center;gap:20px;flex-shrink:0}
 .nav-login{font-size:.9rem;font-weight:500;color:var(--ink);white-space:nowrap;position:relative}
 .nav-login::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1.5px;background:var(--mauve);transition:width .3s var(--ease)}
