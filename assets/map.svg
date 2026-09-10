@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#EDE4DA"/>
+<!-- abstract streets -->
+<g stroke="#D9CBBE" stroke-width="14" fill="none" opacity="0.9">
+<path d="M-20 210 H1220"/><path d="M-20 470 H1220"/><path d="M-20 650 H1220"/>
+<path d="M240 -20 V820"/><path d="M560 -20 V820"/><path d="M880 -20 V820"/>
+</g>
+<g stroke="#C8A48E" stroke-width="6" fill="none" opacity="0.7">
+<path d="M-20 330 H1220"/><path d="M400 -20 V820"/><path d="M1040 -20 V820"/>
+</g>
+<!-- park block -->
+<rect x="600" y="230" width="260" height="220" rx="10" fill="#B7B79A" opacity="0.5"/>
+<!-- building blocks -->
+<g fill="#D9CBBE" opacity="0.6">
+<rect x="280" y="250" width="90" height="60" rx="4"/>
+<rect x="300" y="510" width="120" height="80" rx="4"/>
+<rect x="920" y="500" width="100" height="90" rx="4"/>
+</g>
+<!-- pin at studio -->
+<g transform="translate(560,470)">
+<ellipse cx="0" cy="16" rx="26" ry="7" fill="#2B2B29" opacity="0.25"/>
+<path d="M0 12 C0 12 -34 -28 -34 -52 A34 34 0 1 1 34 -52 C34 -28 0 12 0 12 Z" fill="#A6807C"/>
+<circle cx="0" cy="-52" r="13" fill="#F7F3EE"/>
+</g>
+<text x="560" y="540" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#2B2B29">Leaside Pilates</text>
+<text x="560" y="572" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" fill="#5A5D53">28 Industrial St, East York</text>
+</svg>

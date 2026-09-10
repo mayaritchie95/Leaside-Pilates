@@ -125,19 +125,19 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
 (function(){
   const form = document.getElementById('intro-form');
   if(!form) return;
-  const EMAIL = 'mailto:iva.mazar@gmail.com?subject=Private%20Pilates%20Inquiry';
+  const EMAIL = 'mailto:hello@leasidepilates.com?subject=Private%20Pilates%20Inquiry';
   const LINKS = {
     'Group reformer classes': 'https://momence.com/m/593017',
     'Private Pilates': EMAIL,
     'Duo or trio sessions': 'https://momence.com/m/595533',
     'Gyrotonic®': EMAIL,
     'Pre / postnatal Pilates': EMAIL,
-    "I'm not sure yet": 'mailto:iva.mazar@gmail.com?subject=Getting%20Started%20at%20Leaside%20Pilates'
+    "I'm not sure yet": 'mailto:hello@leasidepilates.com?subject=Getting%20Started%20at%20Leaside%20Pilates'
   };
   form.addEventListener('submit', e => {
     e.preventDefault();
     const svc = form.querySelector('[name="service"]').value;
-    const url = LINKS[svc] || 'mailto:iva.mazar@gmail.com';
+    const url = LINKS[svc] || 'mailto:hello@leasidepilates.com';
     if (url.startsWith('mailto:')) { window.location.href = url; }
     else { window.open(url, '_blank', 'noopener'); }
   });

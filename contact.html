@@ -42,8 +42,14 @@
           </ul>
         </li>
         <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="first-visit.html">New Here</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li class="has-menu">
+          <a href="about.html" aria-haspopup="true">About <span class="caret" aria-hidden="true"></span></a>
+          <ul class="submenu">
+            <li><a href="about.html">About the Studio<small>Our story &amp; team</small></a></li>
+            <li><a href="first-visit.html">New Here<small>Your first visit</small></a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -59,50 +65,59 @@
   <a href="group-classes.html">Group Classes</a>
   <a href="gyrotonic.html">Gyrotonic&reg;</a>
   <a href="pricing.html">Pricing</a>
-  <a href="first-visit.html">New Here</a>
+  <a href="schedule.html">Schedule</a>
   <a href="about.html">About</a>
+  <a href="first-visit.html">New Here</a>
   <a href="contact.html">Contact</a>
   <a class="nav-login" href="contact.html#login" style="padding:14px 0;border-bottom:1px solid var(--line)">Log In / Sign Up</a>
   <a class="btn brass" href="contact.html#book">Book Now</a>
 </div>
 <main id="main">
 
-<section class="page-hero"><div class="wrap"><span class="eyebrow">Get in Touch</span><h1>Contact &amp; booking</h1><p>Book classes, schedule a private, or send us a message. We&#8217;re here to help you get started.</p></div></section>
-<section class="section"><div class="wrap split">
-  <div class="reveal">
-    <span class="eyebrow">Visit the Studio</span>
-    <h2>Leaside Pilates</h2>
-    <p>28 Industrial St, Unit 108 &amp; 109<br>East York, ON, M4G 1Y9</p>
-    <p><strong>Phone:</strong> <a href="tel:+16475509968" style="color:var(--brass-deep)">647-550-9968</a><br>
-    <strong>Email:</strong> <a href="mailto:iva.mazar@gmail.com" style="color:var(--brass-deep)">iva.mazar@gmail.com</a></p>
-    <p style="margin-top:14px"><strong>Serving:</strong> Leaside, Bennington Heights, Moore Park, Davisville Village, Mount Pleasant, Yonge &amp; Eglinton, Lawrence Park, Rosedale, East York &amp; Midtown Toronto.</p>
-    <div class="hero-actions" style="margin-top:24px">
-      <a class="btn brass" href="mailto:iva.mazar@gmail.com">Message Us</a>
-      <a class="btn ghost" href="#login">Log In / Sign Up</a>
+<!-- PHOTO HERO (matches About) -->
+<section class="about-hero">
+  <div class="about-hero-media"><img src="assets/community.jpg" alt="Leaside Pilates instructors and clients in the studio" width="1800" height="1200" fetchpriority="high"></div>
+  <div class="about-hero-inner">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>Contact us</h1>
+  </div>
+</section>
+
+<!-- CONTACT: form + studio info -->
+<section class="section"><div class="wrap contact-grid">
+  <div class="contact-copy reveal">
+    <span class="eyebrow">Send a Message</span>
+    <h2>We'd love to hear from you</h2>
+    <p>Questions about classes, private sessions, or getting started? Send us a message and we'll be in touch. You can also reach us directly using the details below.</p>
+    <div class="contact-details">
+      <div><span>Location</span><p>28 Industrial St, Unit 108 &amp; 109<br>East York, ON M4G 1Y9</p></div>
+      <div><span>Get in touch</span><p><a href="tel:+16475509968">647-550-9968</a><br><a href="mailto:hello@leasidepilates.com">hello@leasidepilates.com</a></p></div>
     </div>
+    <figure class="contact-map">
+      <img src="assets/map.svg" alt="Map showing Leaside Pilates at 28 Industrial St, East York" width="1200" height="800" loading="lazy">
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=28+Industrial+St+Unit+108+East+York+ON+M4G+1Y9" target="_blank" rel="noopener">Get directions</a>
+    </figure>
   </div>
   <div class="reveal d1" id="book">
-    <span class="eyebrow">Book &amp; Purchase</span>
-    <h2 style="margin-bottom:18px">Schedule with Momence</h2>
     <div class="embed-wrap">
-      <!-- MOMENCE EMBED: paste the Momence schedule/checkout iframe or widget code here -->
+      <!-- MOMENCE CONTACT / LEAD FORM EMBED: paste the Momence contact form widget or iframe here -->
       <div class="embed-placeholder">
-        <b>Momence booking widget</b>
-        <p>The Momence scheduling &amp; checkout embed will be placed here. Paste your Momence iframe/widget code into this container before launch, replacing this placeholder.</p>
-        <a class="btn brass" href="#">Open Booking (Momence)</a>
+        <b>Contact form</b>
+        <p>Your Momence contact form will appear here so messages come straight to you. Paste the Momence form embed into this container before launch, replacing this placeholder.</p>
+        <a class="btn brass" href="mailto:hello@leasidepilates.com">Email us in the meantime</a>
       </div>
     </div>
   </div>
 </div></section>
-<section class="section services" id="login"><div class="wrap">
-  <div class="head center reveal"><span class="eyebrow">Members</span><h2>Log in or create an account</h2><p>Access your Momence profile to manage bookings, packages, and payments.</p></div>
-  <div class="embed-wrap reveal" style="max-width:760px;margin-inline:auto">
-    <!-- MOMENCE LOGIN/SIGNUP EMBED -->
-    <div class="embed-placeholder">
-      <b>Momence login / sign up</b>
-      <p>Embed the Momence member login &amp; sign-up widget here so clients can access their profile directly from the site.</p>
-      <a class="btn" href="#">Log In / Sign Up (Momence)</a>
-    </div>
+
+<!-- STUDIO INFO -->
+<section class="section services"><div class="wrap">
+  <div class="head center reveal"><span class="eyebrow">Studio Information</span><h2>Visiting Leaside Pilates</h2></div>
+  <div class="studio-info-grid">
+    <div class="studio-info reveal"><span class="si-label">Address</span><p>28 Industrial St, Unit 108 &amp; 109<br>East York, ON M4G 1Y9</p></div>
+    <div class="studio-info reveal d1"><span class="si-label">Two Studios</span><p>Unit 108 — small group classes<br>Unit 109 — private, duo &amp; trio</p></div>
+    <div class="studio-info reveal d2"><span class="si-label">Serving</span><p>Leaside, Midtown Toronto &amp; surrounding neighbourhoods</p></div>
+    <div class="studio-info reveal"><span class="si-label">Booking</span><p>Group, duo &amp; trio through Momence<br>Private sessions by request</p></div>
   </div>
 </div></section>
 </main>

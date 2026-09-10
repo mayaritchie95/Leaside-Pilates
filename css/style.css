@@ -247,6 +247,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .rate-label{font-size:1rem;color:var(--ink)}
 .rate-price{font-family:var(--serif);font-size:1.35rem;color:var(--mauve-deep);text-align:right;min-width:90px}
 .rate-row .btn{padding:10px 20px;font-size:.82rem}
+.rate-save{display:inline-block;font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--white);background:var(--sage);padding:3px 8px;border-radius:var(--r);margin-left:8px;vertical-align:middle}
 .rate-notes{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:7px}
 .rate-notes li{font-size:.85rem;color:var(--muted);padding-left:18px;position:relative}
 .rate-notes li::before{content:"·";position:absolute;left:4px;color:var(--mauve);font-weight:700}
@@ -334,6 +335,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .split p{color:var(--muted);margin-bottom:16px}
 .split .btn{margin-top:8px}
 .split.rev .split-media{order:2}
+.split-stretch{align-items:stretch}
+.split-stretch .split-media{display:flex}
+.split-stretch .split-media img{aspect-ratio:auto;max-height:none;height:100%;min-height:520px}
 
 /* full-bleed photo band */
 .photo-band{position:relative;height:clamp(320px,52vw,560px);overflow:hidden}
@@ -353,7 +357,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 /* ---- about photo hero ---- */
 .about-hero{position:relative;min-height:min(72vh,620px);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--mauve-deep)}
 .about-hero-media{position:absolute;inset:0}
-.about-hero-media img{width:100%;height:100%;object-fit:cover}
+.about-hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
 .about-hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,43,41,.30),rgba(43,43,41,.42))}
 .about-hero-inner{position:relative;z-index:2;color:var(--white);padding:0 var(--gut);max-width:900px}
 .about-hero-inner .eyebrow{color:var(--ivory);justify-content:center}
@@ -361,6 +365,26 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .about-hero-inner h1{color:var(--white);font-size:clamp(2.4rem,6vw,4.6rem);font-weight:300;margin:18px 0 28px;text-shadow:0 1px 24px rgba(43,43,41,.35)}
 .about-hero-inner .btn{background:var(--white);border-color:var(--white);color:var(--mauve-deep)}
 .about-hero-inner .btn:hover{background:var(--ivory);border-color:var(--ivory)}
+
+/* contact map + studio info */
+.contact-map{margin:32px 0 0}
+.contact-map img{width:100%;border-radius:var(--r);border:1px solid var(--line);margin-bottom:14px}
+.studio-info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.studio-info{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
+.si-label{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--mauve-deep);margin-bottom:10px}
+.studio-info p{color:var(--muted);font-size:.95rem}
+@media(max-width:900px){.studio-info-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.studio-info-grid{grid-template-columns:1fr}}
+
+/* ---- gift card banner ---- */
+.giftcard-banner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;background:var(--mauve-deep);color:var(--ivory);padding:16px 24px;text-align:center;transition:background .3s var(--ease)}
+.giftcard-banner:hover{background:var(--ink)}
+.giftcard-banner .gc-icon{color:var(--oak);font-size:1.1rem}
+.giftcard-banner .gc-text{font-family:var(--sans);font-size:.98rem}
+.giftcard-banner .gc-text strong{font-weight:600}
+.giftcard-banner .gc-cta{font-family:var(--sans);font-weight:600;font-size:.9rem;color:var(--ivory);border:1px solid rgba(247,243,238,.5);border-radius:var(--r);padding:7px 16px;white-space:nowrap;transition:.3s var(--ease)}
+.giftcard-banner:hover .gc-cta{background:var(--ivory);color:var(--mauve-deep);border-color:var(--ivory)}
+@media(max-width:600px){.giftcard-banner{flex-direction:column;gap:10px}}
 
 /* ---- new client offers sliding banner ---- */
 .offer-banner{background:var(--plaster);color:var(--ink);overflow:hidden;padding:22px 0;white-space:nowrap;border-block:1px solid var(--line)}
