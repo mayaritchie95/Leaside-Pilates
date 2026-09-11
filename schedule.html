@@ -20,6 +20,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* Momence schedule widget theming (brand palette) */
+#ribbon-schedule{
+  --momenceColorBackground: #F7F3EE;
+  --momenceColorPrimary: 166, 128, 124;
+  --momenceColorBlack: 3, 1, 13;
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -76,12 +84,21 @@
 <section class="page-hero page-hero--tight"><div class="wrap"><span class="eyebrow">Timetable</span><h1>Class schedule</h1><p>Browse upcoming small group classes and reserve your spot. All bookings are managed through Momence.</p></div></section>
 <section class="section"><div class="wrap">
   <div class="embed-wrap">
-    <!-- MOMENCE SCHEDULE EMBED: paste the Momence timetable/schedule widget or iframe here -->
-    <div class="embed-placeholder">
-      <b>Momence schedule widget</b>
-      <p>The live class timetable will appear here. Paste your Momence schedule embed into this container before launch, replacing this placeholder.</p>
-      <a class="btn brass" href="https://momence.com/Leaside-Pilates" target="_blank" rel="noopener">View Schedule on Momence</a>
-    </div>
+    <div id="ribbon-schedule"></div>
+    <script
+      async
+      type="module"
+      host_id="150866"
+      teacher_ids="[]"
+      location_ids="[]"
+      tag_ids="[]"
+      session_type="class"
+      lite_mode="true"
+      default_filter="show-all"
+      locale="en"
+      lock_timezone="America/Toronto"
+      src="https://momence.com/plugin/host-schedule/host-schedule.js"
+    ></script>
   </div>
 </div></section>
 <section class="section cta-band"><div class="wrap"><h2>New to the studio?</h2><p>Start with an intro offer, then book your first class.</p><div class="hero-actions"><a class="btn lg" href="pricing.html">View Intro Offers</a><a class="btn ghost lg" href="first-visit.html">New Here?</a></div></div></section>
