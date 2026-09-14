@@ -44,6 +44,7 @@ document.getElementById('site-footer').innerHTML = `
         <ul>
           <li><a href="tel:+16475509968">647-550-9968</a></li>
           <li><a href="mailto:hello@leasidepilates.com">hello@leasidepilates.com</a></li>
+          <li><a href="https://www.instagram.com/leasidepilates/" target="_blank" rel="noopener">Instagram @leasidepilates</a></li>
           <li><a href="contact.html#login">Log In / Sign Up</a></li>
         </ul>
       </div>
