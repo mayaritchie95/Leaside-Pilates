@@ -1,8 +1,16 @@
 // header shadow on scroll
 const header = document.querySelector('.site-header');
 if (header) {
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
-  onScroll();
+  let scrolled = null, ticking = false;
+  const apply = () => {
+    const next = window.scrollY > 8;
+    if (next !== scrolled) { scrolled = next; header.classList.toggle('scrolled', next); }
+    ticking = false;
+  };
+  const onScroll = () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(apply); }
+  };
+  apply();
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
