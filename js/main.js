@@ -150,3 +150,13 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
     else { window.open(url, '_blank', 'noopener'); }
   });
 })();
+
+// Load the hero video after first paint so the poster shows instantly
+// (preload="none" keeps the 8.9MB off the critical path).
+(function () {
+  const v = document.querySelector('.hero-video');
+  if (!v) return;
+  const start = () => { try { v.load(); const p = v.play(); if (p) p.catch(() => {}); } catch (e) {} };
+  if (document.readyState === 'complete') { start(); }
+  else { window.addEventListener('load', () => { requestAnimationFrame(start); }); }
+})();

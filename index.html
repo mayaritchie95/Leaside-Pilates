@@ -126,10 +126,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-media">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline preload="none" poster="assets/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
       <source src="assets/hero.mp4" type="video/mp4">
     </video>
-    <img class="hero-fallback" src="assets/hero-poster.jpg" alt="Instructors and clients moving together in a bright group class at Leaside Pilates in Toronto" width="2000" height="1126" fetchpriority="high">
+    <img class="hero-fallback" src="assets/hero-poster.jpg" alt="A client moving through a class on the Stability Chair in a bright group session at Leaside Pilates in Toronto" width="1920" height="1280" fetchpriority="high">
   </div>
   <div class="wrap hero-inner">
     <span class="eyebrow">Pilates &amp; Gyrotonic® · Toronto</span>
@@ -179,19 +180,19 @@
   </div>
 </div>
 
-<!-- INTRO OFFER STRIP (Private · Duo/Trio · Group) -->
-<section class="offer-strip">
+<!-- INTRO OFFER STRIP (Private · Duo/Trio · Group + photo) -->
+<section class="offer-strip offer-strip--photo">
   <div class="offer-card featured reveal">
     <h3>3 Private Sessions</h3>
     <p class="price">$285</p>
     <p>A focused introduction tailored to your body, experience, and goals.</p>
-    <a class="text-link" href="pricing.html#intro-private">Enquire by email <span aria-hidden="true">→</span></a>
+    <a class="text-link" href="contact.html#book">Book Now <span aria-hidden="true">→</span></a>
   </div>
   <div class="offer-card reveal">
     <h3>3 Duo / Trio Sessions</h3>
     <p class="price">$145</p>
     <p>Share the experience with a partner or friends.</p>
-    <a class="text-link" href="pricing.html#intro-duo">Book Now <span aria-hidden="true">→</span></a>
+    <a class="text-link" href="contact.html#book">Book Now <span aria-hidden="true">→</span></a>
   </div>
   <div class="offer-card reveal">
     <h3>3 Group Classes</h3>
@@ -199,8 +200,8 @@
     <p>Discover our fully equipped Pilates studio, offering four different class styles to suit your experience, goals, and movement preferences.</p>
     <a class="text-link" href="pricing.html#intro-group">Book Now <span aria-hidden="true">→</span></a>
   </div>
+  <figure class="offer-photo reveal"><img src="assets/changeroom.jpg" alt="The terrazzo change room vanity and arched nook at Leaside Pilates" loading="lazy" decoding="async"></figure>
 </section>
-<figure class="offer-strip-photo reveal"><img src="assets/group-wide.jpg" alt="The bright group reformer studio at Leaside Pilates" loading="lazy" decoding="async"></figure>
 
 <!-- WAYS TO MOVE (ruled index, no photos) -->
 <section class="section ways">
@@ -266,11 +267,10 @@
       <span class="eyebrow">Inside Leaside Pilates</span>
       <h2>Your neighbourhood movement space</h2>
     </div>
-    <div class="gallery-grid">
-      <figure class="g-big reveal"><img src="assets/group-wide.jpg" alt="The bright group reformer studio at Leaside Pilates, viewed through greenery" width="2000" height="1333" loading="lazy" decoding="async"></figure>
-      <figure class="g-tall reveal"><img src="assets/studio-private.jpg" alt="The private Pilates studio with Cadillac trapeze table at Leaside Pilates" width="1400" height="933" loading="lazy" decoding="async"></figure>
-      <figure class="reveal"><img src="assets/lounge-arches.jpg" alt="The bouclé sofa and arched lounge at Leaside Pilates" width="1366" height="2048" loading="lazy" decoding="async"></figure>
-      <figure class="reveal"><img src="assets/changeroom.jpg" alt="The terrazzo change room vanity at Leaside Pilates" width="1366" height="2048" loading="lazy" decoding="async"></figure>
+    <div class="gallery-grid gallery-grid--feature">
+      <figure class="g-feature reveal"><img src="assets/studio-vertical.jpg" alt="The Tower and Reformer with fiddle-leaf greenery at Leaside Pilates" width="1067" height="1600" loading="lazy" decoding="async"></figure>
+      <figure class="reveal"><img src="assets/studio-cadillac.jpg" alt="The Cadillac trapeze table framed by arches at Leaside Pilates" width="1600" height="1066" loading="lazy" decoding="async"></figure>
+      <figure class="reveal"><img src="assets/studio-reformers.jpg" alt="Reformers set up under tall windows at Leaside Pilates" width="1600" height="1066" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -295,38 +295,6 @@
         <figure class="testi-card" role="listitem"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Hidden gem! Beautiful little studio. Ewa is the best! I would highly recommend it to anyone wanting to try Pilates for the first time or if you're a seasoned veteran."</blockquote><cite>EG<small>Group class</small></cite></figure>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT (mockup inline form, routes to Momence) -->
-<section class="section contact-home" id="start">
-  <div class="wrap contact-grid">
-    <div class="contact-copy reveal">
-      <span class="eyebrow">Start Your Pilates Practice</span>
-      <h2>Let's find the best place for you to begin.</h2>
-      <p>Tell us a little about your experience and goals. We'll help you choose between group classes, private sessions, or a personalized intro — then get you booked through Momence.</p>
-      <div class="contact-details">
-        <div><span>Location</span><p>28 Industrial St, Unit 108 &amp; 109<br>East York, ON M4G 1Y9</p></div>
-        <div><span>Get in touch</span><p><a href="tel:+16475509968">647-550-9968</a><br><a href="mailto:hello@leasidepilates.com">hello@leasidepilates.com</a></p></div>
-      </div>
-    </div>
-    <form class="contact-form reveal d1" id="intro-form">
-      <label>Name<input type="text" name="name" placeholder="Your name" autocomplete="name"></label>
-      <label>Email<input type="email" name="email" placeholder="you@example.com" autocomplete="email"></label>
-      <label>I'm interested in
-        <select name="service">
-          <option>Group reformer classes</option>
-          <option>Private Pilates</option>
-          <option>Duo or trio sessions</option>
-          <option>Gyrotonic®</option>
-          <option>Pre / postnatal Pilates</option>
-          <option>I'm not sure yet</option>
-        </select>
-      </label>
-      <label>Tell us about your goals<textarea name="message" rows="4" placeholder="A few details help us guide you."></textarea></label>
-      <button class="btn brass" type="submit">Continue to Booking</button>
-      <p class="form-note" role="status">You'll be taken to our Momence booking to choose a time. Prefer to talk first? <a href="mailto:hello@leasidepilates.com">Email us</a>.</p>
-    </form>
   </div>
 </section>
 
