@@ -1,16 +1,6 @@
 document.getElementById('site-footer').innerHTML = `
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot-newsletter">
-      <div class="foot-news-copy">
-        <h3>Stay in the loop</h3>
-        <p>Sign up for news about our workshops, community events, and class promos.</p>
-      </div>
-      <div class="foot-news-form">
-        <div id="momence-plugin-lead-form"></div>
-        <p class="news-note">By signing up you'll hear about workshops, community events, and class promos.</p>
-      </div>
-    </div>
     <div class="foot-grid">
       <div>
         <div class="foot-brand"><span class="foot-brand-name">Leaside</span><span class="foot-brand-sub">Pilates</span></div>
@@ -31,7 +21,8 @@ document.getElementById('site-footer').innerHTML = `
         <ul>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="first-visit.html">New Here</a></li>
-          <li><a href="pricing.html#faq">FAQ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="https://momence.com/Leaside-Pilates" target="_blank" rel="noopener">Gift Cards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
