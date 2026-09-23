@@ -406,6 +406,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .split.rev .split-media{order:2}
 .split-stretch{align-items:stretch}
 .split-stretch .split-media{min-height:520px}
+/* split-natural: show the full image at its natural aspect ratio, text centered beside it */
+.split-natural .split-media{position:static;min-height:0}
+.split-natural .split-media img{position:static;width:100%;height:auto;object-fit:contain;border-radius:var(--r)}
 .classes .head{margin-bottom:clamp(40px,6vw,72px)}
 .split-class{padding:clamp(36px,6vw,64px) 0}
 .split-class + .split-class{border-top:1px solid var(--line)}
