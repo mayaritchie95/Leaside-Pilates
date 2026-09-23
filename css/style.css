@@ -387,14 +387,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 /* two-col content */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:stretch}
 .split > div:not(.split-media){display:flex;flex-direction:column;justify-content:center}
-.split img{width:100%;aspect-ratio:4/4.6;max-height:600px;object-fit:cover;border-radius:var(--r)}
+.split-media{position:relative;min-height:340px}
+.split img{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;border-radius:var(--r)}
 .split h2{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:300;margin-bottom:18px}
 .split p{color:var(--muted);margin-bottom:16px}
-.split .btn{margin-top:auto;align-self:flex-start}
+.split .btn{margin-top:12px;align-self:flex-start}
 .split.rev .split-media{order:2}
 .split-stretch{align-items:stretch}
-.split-stretch .split-media{display:flex}
-.split-stretch .split-media img{aspect-ratio:auto;max-height:none;height:100%;min-height:520px}
+.split-stretch .split-media{min-height:520px}
 .classes .head{margin-bottom:clamp(40px,6vw,72px)}
 .split-class{padding:clamp(36px,6vw,64px) 0}
 .split-class + .split-class{border-top:1px solid var(--line)}
