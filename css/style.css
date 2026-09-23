@@ -73,14 +73,13 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 /* ---------- Header ---------- */
 .site-header{
   position:sticky;top:0;z-index:60;
-  background:rgba(245,242,236,.82);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  background:rgba(245,242,236,.92);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
   border-bottom:1px solid transparent;
   transition:border-color .4s var(--ease),background .4s var(--ease);
   transform:translateZ(0);
   -webkit-transform:translateZ(0);
-  will-change:background;
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden;
 }
@@ -375,8 +374,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .foot-bottom .legal{display:flex;gap:22px;flex-wrap:wrap}
 
 /* ---------- Reveal animation (breath) ---------- */
-.reveal{opacity:0;transform:translate3d(0,26px,0);transition:opacity .9s var(--ease),transform .9s var(--ease);will-change:opacity,transform;backface-visibility:hidden}
-.reveal.in{opacity:1;transform:translate3d(0,0,0);will-change:auto}
+.reveal{opacity:0;transform:translate3d(0,26px,0);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
 
 /* ---------- Page hero (interior) ---------- */
@@ -435,7 +434,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 /* ---- about photo hero ---- */
 .about-hero{position:relative;min-height:min(72vh,620px);display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;background:var(--mauve-deep)}
 /* split hero: mauve copy panel + photo */
-.split-hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(78vh,680px)}
+.split-hero{display:grid;grid-template-columns:1fr 1fr;height:min(72vh,620px)}
 .split-hero-copy{background:var(--mauve);color:var(--white);display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,6vw,96px)}
 .split-hero-copy .eyebrow{color:var(--boucle);justify-content:flex-start}
 .split-hero-copy h1{font-family:var(--serif);font-weight:300;font-size:clamp(2.6rem,5vw,4.2rem);line-height:1.02;margin:18px 0 24px;color:var(--white)}

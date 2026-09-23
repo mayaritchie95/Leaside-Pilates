@@ -160,3 +160,15 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
   if (document.readyState === 'complete') { start(); }
   else { window.addEventListener('load', () => { requestAnimationFrame(start); }); }
 })();
+
+// Pause the marquee animations when off-screen to save GPU/CPU
+(function () {
+  const marquees = document.querySelectorAll('.testi-track, .offer-banner-track');
+  if (!('IntersectionObserver' in window) || !marquees.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      e.target.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+    });
+  }, { rootMargin: '100px' });
+  marquees.forEach(m => io.observe(m));
+})();
