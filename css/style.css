@@ -205,10 +205,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .ways-list li:last-child{border-bottom:1px solid var(--line)}
 .ways-link{display:inline-flex;align-items:center;gap:8px;color:var(--mauve-deep);font-weight:600;text-decoration:none;margin-top:auto}
 .ways-link:hover{opacity:.7}
-/* distinct accent per column */
-.ways-col:nth-child(1) .ways-num,.ways-col:nth-child(1) .ways-link{color:#7A5750}
-.ways-col:nth-child(2) .ways-num,.ways-col:nth-child(2) .ways-link{color:#A6807C}
-.ways-col:nth-child(3) .ways-num,.ways-col:nth-child(3) .ways-link{color:#8C8577}
+.ways-num{color:var(--mauve)}
 
 /* closing photo under the intro offer strip */
 .offer-strip-photo{margin:0}
