@@ -22,7 +22,7 @@ document.getElementById('site-footer').innerHTML = `
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="first-visit.html">New Here</a></li>
           <li><a href="faq.html">FAQ</a></li>
-          <li><a href="https://momence.com/Leaside-Pilates" target="_blank" rel="noopener">Gift Cards</a></li>
+          <li><a href="gift-cards.html">Gift Cards</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
