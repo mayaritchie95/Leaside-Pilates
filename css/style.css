@@ -407,12 +407,14 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .split-stretch{align-items:stretch}
 .split-stretch .split-media{min-height:520px}
 /* split-natural: show the full image at its natural aspect ratio, text centered beside it */
+.split-natural{grid-template-columns:1.05fr .95fr;gap:clamp(24px,3vw,44px);align-items:center}
 .split-natural .split-media{position:static;min-height:0}
 .split-natural .split-media img{position:static;width:100%;height:auto;object-fit:contain;border-radius:var(--r)}
-.split-natural > div:not(.split-media){justify-content:space-between;max-width:40ch}
-.split-natural-body p{margin-bottom:16px}
+.split-natural > div:not(.split-media){justify-content:center;max-width:none}
+.split-natural h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.split-natural-body p{margin-bottom:22px;font-size:1.08rem;line-height:1.8}
 .split-natural-body p:last-child{margin-bottom:0}
-.split-natural .btn{margin-top:0}
+.split-natural .btn{margin-top:32px}
 .classes .head{margin-bottom:clamp(40px,6vw,72px)}
 .split-class{padding:clamp(36px,6vw,64px) 0}
 .split-class + .split-class{border-top:1px solid var(--line)}
@@ -575,7 +577,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .btn.full{width:100%;text-align:center;justify-content:center}
 
 /* ---- compact newsletter band ---- */
-.newsletter-band{background:var(--boucle)}
+.newsletter-band{background:#F7F3EE}
 .newsletter-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
 .newsletter-copy h2{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:300;margin:12px 0 10px}
 .newsletter-copy p{color:var(--muted);max-width:38ch}
