@@ -297,6 +297,16 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .guide-step .text-link{font-family:var(--sans);font-weight:600;font-size:.9rem;color:var(--mauve);display:inline-flex;gap:8px;align-items:center;transition:gap .3s var(--ease)}
 .guide-step .text-link:hover{gap:13px;color:var(--mauve-deep)}
 @media(max-width:760px){.guide-steps{grid-template-columns:1fr}}
+.guide-steps--2{grid-template-columns:1fr 1fr}
+@media(max-width:760px){.guide-steps--2{grid-template-columns:1fr}}
+.guide-list{margin:8px 0 24px;display:flex;flex-direction:column;gap:16px;flex:1 0 auto}
+.guide-list > div{border-top:1px solid var(--line);padding-top:16px}
+.guide-list strong{display:block;font-family:var(--serif);font-weight:400;font-size:1.1rem;color:var(--ink);margin-bottom:4px}
+.guide-list p{margin:0;font-size:.94rem}
+.guide-step .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.guide-step .btn{text-decoration:none;margin-top:auto}
+.guide-step .btn-row .btn{margin-top:0}
+.guide-step .guide-list a{margin-top:0}
 
 /* private pilates gallery */
 .pp-gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;grid-auto-rows:340px}
