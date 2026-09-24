@@ -592,6 +592,8 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 
 /* ---- compact newsletter band ---- */
 .newsletter-band{background:#F7F3EE}
+.newsletter-form-center{max-width:560px;margin:0 auto}
+.newsletter-form-center #momence-plugin-lead-form{width:100%}
 .newsletter-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
 .newsletter-copy h2{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:300;margin:12px 0 10px}
 .newsletter-copy p{color:var(--muted);max-width:38ch}
