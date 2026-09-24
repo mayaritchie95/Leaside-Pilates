@@ -5,7 +5,7 @@ document.getElementById('site-footer').innerHTML = `
       <div>
         <div class="foot-brand"><span class="foot-brand-name">Leaside</span><span class="foot-brand-sub">Pilates</span></div>
         <p>A boutique Pilates &amp; Gyrotonic® studio in Toronto. Private sessions, duos, trios, and small group classes with experienced instructors.</p>
-        <p style="margin-top:12px">28 Industrial St, Unit 108 &amp; 109<br>East York, ON, M4G 1Y9</p>
+        <p style="margin-top:12px">28 Industrial St, Unit 108 &amp; 109<br>East York, ON, M4G 1Y9<br>Free parking available</p>
       </div>
       <div class="foot-col">
         <h4>Explore</h4>
