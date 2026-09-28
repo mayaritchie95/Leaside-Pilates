@@ -58,7 +58,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 
 /* ---------- Layout ---------- */
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
-.section{padding-block:clamp(40px,4.5vw,72px)}
+.section{padding-block:clamp(32px,3.8vw,60px)}
 .eyebrow{
   font-family:var(--sans);
   font-size:.72rem;
@@ -738,7 +738,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
   .split-hero{grid-template-columns:1fr;height:auto}
   .split-hero-media{min-height:360px;order:-1}
   .split-hero-copy{padding-top:clamp(32px,8vw,56px);padding-bottom:clamp(32px,8vw,56px)}
-  .split-hero-copy h1{font-size:clamp(2.1rem,9vw,2.9rem)}
+  .split-hero-copy h1{font-size:clamp(1.9rem,7.5vw,2.6rem)}
   .newhere-hero-img{object-position:left center !important}
   .offer-strip--photo{grid-template-columns:1fr}
   .offer-strip--photo .offer-photo{min-height:320px}
