@@ -138,7 +138,7 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
     'Group reformer classes': 'https://momence.com/m/593017',
     'Private Pilates': EMAIL,
     'Duo or trio sessions': 'https://momence.com/m/595533',
-    'Gyrotonic®': EMAIL,
+    'GYROTONIC®': EMAIL,
     'Pre / postnatal Pilates': EMAIL,
     "I'm not sure yet": 'mailto:hello@leasidepilates.com?subject=Getting%20Started%20at%20Leaside%20Pilates'
   };
