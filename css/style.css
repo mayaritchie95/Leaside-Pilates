@@ -735,8 +735,9 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
   .intro-grid{grid-template-columns:1fr}
   .newsletter-inner{grid-template-columns:1fr}
   .newsletter-form{justify-self:stretch;max-width:none}
-  .split-hero{grid-template-columns:1fr}
+  .split-hero{grid-template-columns:1fr;height:auto}
   .split-hero-media{min-height:360px;order:-1}
+  .split-hero-copy{padding-top:clamp(32px,8vw,56px);padding-bottom:clamp(32px,8vw,56px)}
   .offer-strip--photo{grid-template-columns:1fr}
   .offer-strip--photo .offer-photo{min-height:320px}
   .studio-feature{grid-template-columns:1fr}
