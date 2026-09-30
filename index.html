@@ -71,6 +71,45 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<!-- ============================================================================
+     OPTIONAL: ANNOUNCEMENT BANNER  (currently OFF)
+     ----------------------------------------------------------------------------
+     A thin bar that appears ABOVE the header. To turn it ON:
+       1. Delete the line "<!-- BANNER START" below and the line "BANNER END -->".
+       2. Edit the message text / link inside.
+     To turn it OFF again, wrap it back in those two comment markers.
+     (The close button is optional and works on its own — no script needed.)
+     ============================================================================ -->
+<!-- BANNER START
+<div class="announce-bar" role="region" aria-label="Announcement">
+  Holiday hours: the studio is closed Dec 25–26. <a href="schedule.html">View the schedule &rarr;</a>
+  <button class="announce-close" aria-label="Dismiss announcement" onclick="this.parentElement.remove()">&times;</button>
+</div>
+BANNER END -->
+
+<!-- ============================================================================
+     OPTIONAL: POPUP MODAL  (currently OFF)
+     ----------------------------------------------------------------------------
+     A centered popup with a dimmed background. To turn it ON:
+       1. Delete the line "<!-- POPUP START" below and the line "POPUP END -->".
+       2. Edit the heading / text / button inside.
+       3. Also enable the popup script (search for "POPUP SCRIPT"
+          near the bottom of this file) — it opens the popup a few seconds after
+          the page loads and remembers if a visitor has closed it.
+     To turn it OFF again, wrap both blocks back in their comment markers.
+     ============================================================================ -->
+<!-- POPUP START
+<div class="popup-overlay" id="site-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+  <div class="popup-card">
+    <button class="popup-close" aria-label="Close" onclick="document.getElementById('site-popup').classList.remove('is-open')">&times;</button>
+    <span class="eyebrow">New Client Offer</span>
+    <h2 id="popup-title">Start with an intro package</h2>
+    <p>New to Leaside Pilates? Try three sessions and discover the approach that's right for you.</p>
+    <a class="btn brass" href="pricing.html">View Intro Offers</a>
+  </div>
+</div>
+POPUP END -->
+
 <!-- HEADER -->
 <header class="site-header">
   <div class="wrap nav">
@@ -342,6 +381,32 @@
 <div id="site-footer"></div>
 <script src="js/footer.js"></script>
 <script src="js/main.js"></script>
+
+<!-- ============================================================================
+     POPUP SCRIPT  (currently OFF — pairs with the POPUP MODAL above)
+     ----------------------------------------------------------------------------
+     To turn the popup ON: change  type="text/plain"  to  type="text/javascript"
+     on the <script> tag just below (and un-comment the POPUP MODAL html above).
+     It shows the popup ~4 seconds after load, once per visitor (remembered via
+     the browser's localStorage). To show it every visit, remove the two
+     localStorage lines. To turn OFF again, set the type back to "text/plain".
+     ============================================================================ -->
+<script type="text/plain" id="popup-script">
+(function () {
+  var popup = document.getElementById('site-popup');
+  if (!popup) return;
+  try { if (localStorage.getItem('leaside-popup-seen')) return; } catch (e) {}
+  setTimeout(function () { popup.classList.add('is-open'); }, 4000);
+  function dismiss() {
+    popup.classList.remove('is-open');
+    try { localStorage.setItem('leaside-popup-seen', '1'); } catch (e) {}
+  }
+  popup.querySelector('.popup-close').addEventListener('click', dismiss);
+  popup.addEventListener('click', function (e) { if (e.target === popup) dismiss(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dismiss(); });
+})();
+</script>
+
 <!-- Momence webchat -->
 <script async type="module" host-id="150866" token="Dg8yGl6Dj4" position="bottom-right" src="https://momence.com/plugin/webchat/webchat.js"></script>
 </body>
