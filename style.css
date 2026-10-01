@@ -778,3 +778,80 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ============================================================================
+   OPTIONAL COMPONENTS — ANNOUNCEMENT BANNER & POPUP MODAL
+   ----------------------------------------------------------------------------
+   These styles power two optional marketing components that are currently
+   TURNED OFF. The matching HTML lives (commented out) at the top of the
+   <body> in each page / in index.html. To use either component, un-comment
+   its HTML block and (if needed) its small activation script. Nothing here
+   renders on its own — these are just the styles, ready to go.
+   ============================================================================ */
+
+/* --- Announcement banner (thin bar, sits above the header) --- */
+.announce-bar{
+  background:var(--mauve-deep);
+  color:var(--white);
+  font-family:var(--sans);
+  font-size:.9rem;
+  letter-spacing:.02em;
+  text-align:center;
+  padding:10px 44px 10px 20px;
+  position:relative;
+}
+.announce-bar a{color:var(--white);text-decoration:underline;text-underline-offset:2px;font-weight:600}
+.announce-bar a:hover{opacity:.85}
+.announce-bar .announce-close{
+  position:absolute;top:50%;right:14px;transform:translateY(-50%);
+  background:none;border:none;color:var(--white);font-size:1.3rem;line-height:1;
+  cursor:pointer;padding:4px 8px;opacity:.8;
+}
+.announce-bar .announce-close:hover{opacity:1}
+
+/* --- Popup modal (centered dialog with dimmed backdrop) --- */
+.popup-overlay{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(43,43,41,.55);
+  backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;
+}
+.popup-overlay.is-open{opacity:1;visibility:visible}
+.popup-card{
+  background:var(--white);border-radius:var(--r);
+  max-width:460px;width:100%;padding:clamp(32px,5vw,48px);
+  text-align:center;position:relative;
+  box-shadow:0 24px 80px rgba(43,43,41,.28);
+  transform:translateY(16px);transition:transform .35s var(--ease);
+}
+.popup-overlay.is-open .popup-card{transform:translateY(0)}
+.popup-card .popup-close{
+  position:absolute;top:14px;right:16px;
+  background:none;border:none;font-size:1.6rem;line-height:1;color:var(--muted);
+  cursor:pointer;padding:4px 8px;
+}
+.popup-card .popup-close:hover{color:var(--ink)}
+.popup-card .eyebrow{justify-content:center;margin-bottom:12px}
+.popup-card h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px;color:var(--ink)}
+.popup-card p{color:var(--muted);margin-bottom:24px;line-height:1.6}
+.popup-card .btn{width:100%;justify-content:center}
+
+/* ============================================================================
+   JUSTIFIED BODY TEXT — every paragraph aligned on both edges ("squared")
+   ============================================================================ */
+p{
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+/* Keep centered intro blocks and center-aligned areas centered */
+.head.center p,
+.cta-band p,
+.center p,
+[style*="text-align:center"] p,
+[style*="text-align: center"] p{
+  text-align:center;
+}

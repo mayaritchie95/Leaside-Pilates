@@ -837,3 +837,21 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spa
 .popup-card h2{font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px;color:var(--ink)}
 .popup-card p{color:var(--muted);margin-bottom:24px;line-height:1.6}
 .popup-card .btn{width:100%;justify-content:center}
+
+/* ============================================================================
+   JUSTIFIED BODY TEXT — every paragraph aligned on both edges ("squared")
+   ============================================================================ */
+p{
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+/* Keep centered intro blocks and center-aligned areas centered */
+.head.center p,
+.cta-band p,
+.center p,
+[style*="text-align:center"] p,
+[style*="text-align: center"] p{
+  text-align:center;
+}
