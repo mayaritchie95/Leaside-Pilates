@@ -40,29 +40,51 @@ if ('IntersectionObserver' in window && reveals.length) {
   reveals.forEach(r => r.classList.add('in'));
 }
 
-// testimonials: seamless auto-sliding marquee
-const track = document.querySelector('.testi-track');
-if (track) {
-  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) {
-    // no animation: let it wrap/scroll naturally
-    track.style.animation = 'none';
-    track.style.flexWrap = 'wrap';
-    track.style.justifyContent = 'center';
-  } else {
-    // duplicate the set once so the -50% keyframe loops seamlessly
-    track.setAttribute('aria-hidden', 'false');
-    const originals = Array.from(track.children);
-    originals.forEach(node => {
-      const clone = node.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
-    });
-    // scale duration to card count so speed feels consistent
-    const perCard = 5; // seconds per card
-    track.style.animationDuration = (originals.length * perCard) + 's';
+// testimonials: static slider navigated by arrows / dots (no auto-scroll)
+(function () {
+  const track = document.querySelector('.testi-track');
+  if (!track) return;
+  const cards = Array.from(track.children);
+  const prev = document.querySelector('.testi-prev');
+  const next = document.querySelector('.testi-next');
+  const dotsWrap = document.querySelector('.testi-dots');
+  if (!cards.length) return;
+
+  let index = 0;
+
+  // build dots
+  const dots = cards.map((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', 'Review ' + (i + 1));
+    b.addEventListener('click', () => go(i));
+    dotsWrap && dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function go(i) {
+    index = (i + cards.length) % cards.length;
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    dots.forEach((d, di) => d.setAttribute('aria-selected', di === index ? 'true' : 'false'));
   }
-}
+
+  // only animate the slide if motion is allowed
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  track.style.transition = reduce ? 'none' : 'transform .45s ease';
+
+  prev && prev.addEventListener('click', () => go(index - 1));
+  next && next.addEventListener('click', () => go(index + 1));
+
+  // keyboard arrows when the slider region has focus
+  const slider = document.querySelector('.testi-slider');
+  slider && slider.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { go(index - 1); }
+    else if (e.key === 'ArrowRight') { go(index + 1); }
+  });
+
+  go(0);
+})();
 
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(q => {
@@ -163,7 +185,7 @@ document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFu
 
 // Pause the marquee animations when off-screen to save GPU/CPU
 (function () {
-  const marquees = document.querySelectorAll('.testi-track, .offer-banner-track');
+  const marquees = document.querySelectorAll('.offer-banner-track');
   if (!('IntersectionObserver' in window) || !marquees.length) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
